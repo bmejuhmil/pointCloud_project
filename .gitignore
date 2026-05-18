@@ -1,0 +1,9 @@
+# Ignore log files
+output/
+
+# Ignore pointclouds 
+pointClouds/
+unusedPointClouds/
+
+# Ignore environment 
+venv/

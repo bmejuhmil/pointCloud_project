@@ -1,0 +1,3 @@
+[submodule "learning3d"]
+	path = learning3d
+	url = https://github.com/vinits5/learning3d
