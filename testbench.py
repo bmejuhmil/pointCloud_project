@@ -7,7 +7,6 @@ from datetime import datetime
 import numpy as np
 import open3d as o3d
 
-# Import your existing modules
 import registration_algos as algos
 import util
 from ai_wrappers import AIRegistrationModel
@@ -17,12 +16,10 @@ class AutomatedTestbench:
         print("Initializing Testbench...")
         self.dataset_dir = dataset_dir
         
-        # Load AI Models once to save time during loops
         print("Loading AI Models...")
         self.dcp_model = AIRegistrationModel("DCP", "pretrained/exp_dcp/models/best_model.t7")
         self.prnet_model = AIRegistrationModel("PRNET", "pretrained/exp_prnet/models/best_model.t7")
 
-        # Setup output directory
         self.output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
         os.makedirs(self.output_dir, exist_ok=True)
         
